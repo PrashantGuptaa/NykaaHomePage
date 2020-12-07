@@ -1,0 +1,66 @@
+.headerTools{
+    display: flex;
+    width: 20%;
+    justify-content: space-evenly;
+}
+.header{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 13px;
+    border-bottom: 1px solid rgb(199, 117, 117);
+    box-shadow: 1px 1px 5px black;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 2;
+    width:100%;
+  }
+ 
+  .cont{
+    display: flex;
+    justify-content: space-evenly;
+   width: 70%; 
+   text-decoration: none;
+color: black;
+  }
+ .lookcard{
+  font-weight: bold;
+ } 
+ .heading{
+     margin-left: 35px;
+ }
+ .general{
+     width: 100vw;
+     justify-content: space-evenly;
+     display: flex;
+     flex-wrap: wrap;
+ }
+ .each{
+     margin: 20px;
+ }
+ .each:hover{
+     box-shadow: 1px 0 5px 1px black;
+     transition: 0.2s ease-in;
+     transform: scale(1.005);
+ }
+ .categorycard{
+padding: 10px;
+width: 165px;
+border: 1px solid black;
+margin: 5px;
+border-radius: 3px;
+font-size: 14px;
+font-weight: bold;
+ }
+ .categorycard:hover{
+    box-shadow: 1px 0 3px 1px black;
+    transition: 0.2s ease-in;
+}
+.thumb{
+    display: none;
+}
+Link{
+    text-decoration: none;
+    color: black;
+}

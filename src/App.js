@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React from "react";
+import HeaderField from "./components/headerField";
+import Login from "./authentication/login";
+import Home from "./components/home";
+import { Switch, Route } from "react-router-dom";
 
-function App() {
+let headerFields = [
+  "WHAT'S NEW",
+  "BRANDS",
+  "WESTERN WEAR",
+  "INDIAN WEAR",
+  "BAGS",
+  "SHOES",
+  "JEWLERRY",
+  "LINGERIE",
+  "KIDS",
+  "MEN",
+  "ACCESSORIES",
+  "LUXE",
+];
+let fields = React.createContext(headerFields);
+function App(props) {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Switch>
+        <Route path="/login" component={Login} />
+        {headerFields.map((field) => (
+          <Route path = {`/:${field}`} key = {field} component = {HeaderField} />
+        ))}
+        <Route exact path="/" component={Home} />
+        </Switch>
     </div>
   );
 }
 
 export default App;
+export { fields };
