@@ -1,3 +1,5 @@
+import React from 'react';
+
 const DisClaimer = () => {
     return (<p style={{ padding: "50px" }}>
     <h3> NYKAA FASHION- YOUR PERFECT STYLING PARTNER</h3>
